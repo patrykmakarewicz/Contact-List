@@ -1,0 +1,53 @@
+﻿@page "/contact"
+@page "/contact/{id:int}"
+@inject IContactService ContactService
+
+<PageTitle>Contact</PageTitle>
+
+<EditForm Model="contact" OnSubmit="HandleSubmit">
+    <div>
+        <label for="firstname">First Name</label>
+        <InputText id="firstname" @bind-Value="contact.FirstName" class="form-control"></InputText>
+    </div>
+    <div>
+        <label for="lastname">Last Name</label>
+        <InputText id="firstname" @bind-Value="contact.LastName" class="form-control"></InputText>
+    </div>
+    <div>
+        <label for="phonenumber">Phone Number</label>
+        <InputText id="firstname" @bind-Value="contact.PhoneNumber" class="form-control"></InputText>
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <InputText id="firstname" @bind-Value="contact.Email" class="form-control"></InputText>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Contact</button>
+    <button type="button" class="btn btn-primary" @onclick="RemoveContact">Remove Contact</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    ContactList.Shared.Contact contact = new ContactList.Shared.Contact();
+
+    protected override async Task OnInitializedAsync()
+    {
+        //buttonText = "Update Contact";
+        await ContactService.GetContacts();
+    }
+    protected override async Task OnParametersSetAsync()
+    {
+        contact = await ContactService.GetContact(Id);
+    }
+
+    async Task HandleSubmit()
+    {
+        await ContactService.UpdateContact(contact);
+    }
+
+    async Task RemoveContact()
+    {
+        await ContactService.RemoveContact(contact.Id);
+    }
+}

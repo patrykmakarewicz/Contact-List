@@ -15,7 +15,7 @@ namespace ContactList.Server.Controllers
 
 
         [HttpGet]
-        public async Task<IEnumerable<Contact>> GetAllContacts()
+        public async Task<IEnumerable<Contact>> GetContacts()
             => await _context.Contact.ToListAsync();
 
         [HttpGet("{id}")]
@@ -28,33 +28,46 @@ namespace ContactList.Server.Controllers
         }
 
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> AddContact(Contact contact)
         {
             await _context.Contact.AddAsync(contact);
             await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetContact), new { id = contact.Id }, contact);
+            return Ok();
         }
 
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> UpdateContact(int id, Contact contact)
+        public async Task<IActionResult> UpdateContact(Contact contact, int id)
         {
-            if (id != contact.Id) return NotFound();
-            _context.Entry(contact).State = EntityState.Modified;
+            var dbContact = await _context.Contact
+                .FirstOrDefaultAsync(o => o.Id == id);
+            if (dbContact == null) return NotFound();
+
+            dbContact.FirstName = contact.FirstName;
+            dbContact.LastName = contact.LastName;
+            dbContact.Email = contact.Email;
+            dbContact.PhoneNumber = contact.PhoneNumber;
+
+
             await _context.SaveChangesAsync();
             return NoContent();
+
+            
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> RemoveContact(int id)
         {
-            var contact = await _context.Contact.FindAsync(id);
-            if (contact == null) return NotFound();
-            _context.Contact.Remove(contact);
+            var dbContact = await _context.Contact
+                .FirstOrDefaultAsync(o => o.Id == id);
+            Console.WriteLine("elo");
+            if (dbContact == null) return NotFound();
+            
+            _context.Contact.Remove(dbContact);
             await _context.SaveChangesAsync();
             return NoContent();
         }

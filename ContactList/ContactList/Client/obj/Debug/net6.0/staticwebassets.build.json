@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+wx9dXuAX4KAIJ+XtElbvEVnvO4k9q7b+RS1z+6NAOY=",
+  "Hash": "i1dmCCFxVHSWnr9LyrrZDBT7/HE9CEA6kqmv70lSCiM=",
   "Source": "ContactList.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -170,6 +170,23 @@
       "OriginalItemSpec": "C:\\Users\\patry\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.13\\runtimes\\browser-wasm\\native\\dotnet.wasm"
     },
     {
+      "Identity": "C:\\Users\\patry\\source\\repos\\Contact-List\\ContactList\\ContactList\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt.dat",
+      "SourceId": "ContactList.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\patry\\source\\repos\\Contact-List\\ContactList\\ContactList\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt.dat",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "native",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\patry\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.13\\runtimes\\browser-wasm\\native\\icudt.dat"
+    },
+    {
       "Identity": "C:\\Users\\patry\\source\\repos\\Contact-List\\ContactList\\ContactList\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt_CJK.dat",
       "SourceId": "ContactList.Client",
       "SourceType": "Computed",
@@ -219,23 +236,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\patry\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.13\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
-    },
-    {
-      "Identity": "C:\\Users\\patry\\source\\repos\\Contact-List\\ContactList\\ContactList\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt.dat",
-      "SourceId": "ContactList.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\patry\\source\\repos\\Contact-List\\ContactList\\ContactList\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt.dat",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "BlazorWebAssemblyResource",
-      "AssetTraitValue": "native",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\patry\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.13\\runtimes\\browser-wasm\\native\\icudt.dat"
     },
     {
       "Identity": "C:\\Users\\patry\\source\\repos\\Contact-List\\ContactList\\ContactList\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
@@ -6953,23 +6953,6 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\patry\\source\\repos\\Contact-List\\ContactList\\ContactList\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-      "SourceId": "ContactList.Client",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\patry\\source\\repos\\Contact-List\\ContactList\\ContactList\\Client\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "css/open-iconic/FONT-LICENSE",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
-    },
-    {
       "Identity": "C:\\Users\\patry\\source\\repos\\Contact-List\\ContactList\\ContactList\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "ContactList.Client",
       "SourceType": "Discovered",
@@ -7070,6 +7053,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Identity": "C:\\Users\\patry\\source\\repos\\Contact-List\\ContactList\\ContactList\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "SourceId": "ContactList.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\patry\\source\\repos\\Contact-List\\ContactList\\ContactList\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/open-iconic/FONT-LICENSE",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "C:\\Users\\patry\\source\\repos\\Contact-List\\ContactList\\ContactList\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",

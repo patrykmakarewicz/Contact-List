@@ -1,0 +1,44 @@
+﻿@page "/addcontact"
+@inject IContactService ContactService
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Add new contact</h1>
+
+<EditForm Model="contact" OnSubmit="HandleSubmit">
+    <div>
+            <label for="firstname">First Name</label>
+        <InputText id="firstname" @bind-Value="contact.FirstName" class="form-control"></InputText>
+        </div>
+    <div>
+            <label for="lastname">Last Name</label>
+        <InputText id="firstname" @bind-Value="contact.LastName" class="form-control"></InputText>
+    </div>
+    <div>
+        <label for="phonenumber">Phone Number</label>
+        <InputText id="firstname" @bind-Value="contact.PhoneNumber" class="form-control"></InputText>
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <InputText id="firstname" @bind-Value="contact.Email" class="form-control"></InputText>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Contact</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    ContactList.Shared.Contact contact = new ContactList.Shared.Contact();
+
+    async Task HandleSubmit()
+    {
+        await ContactService.AddContact(contact);
+        InvokeAsync(() =>
+                {
+
+                    StateHasChanged();
+                });
+    }
+
+}

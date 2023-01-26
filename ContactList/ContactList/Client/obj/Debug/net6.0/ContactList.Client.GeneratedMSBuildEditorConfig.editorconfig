@@ -20,8 +20,12 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/patry/source/repos/Contact-List/ContactList/ContactList/Client/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+[C:/Users/patry/source/repos/Contact-List/ContactList/ContactList/Client/Pages/AddContact.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQ29udGFjdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/patry/source/repos/Contact-List/ContactList/ContactList/Client/Pages/Contact.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/patry/source/repos/Contact-List/ContactList/ContactList/Client/Pages/FetchData.razor]
