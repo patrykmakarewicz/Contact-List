@@ -1,0 +1,12 @@
+C:\Users\patry\source\repos\Contact-List\ContactList\ContactList\Shared\bin\Debug\net6.0\ContactList.Shared.deps.json
+C:\Users\patry\source\repos\Contact-List\ContactList\ContactList\Shared\bin\Debug\net6.0\ContactList.Shared.dll
+C:\Users\patry\source\repos\Contact-List\ContactList\ContactList\Shared\bin\Debug\net6.0\ContactList.Shared.pdb
+C:\Users\patry\source\repos\Contact-List\ContactList\ContactList\Shared\obj\Debug\net6.0\ContactList.Shared.csproj.AssemblyReference.cache
+C:\Users\patry\source\repos\Contact-List\ContactList\ContactList\Shared\obj\Debug\net6.0\ContactList.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\patry\source\repos\Contact-List\ContactList\ContactList\Shared\obj\Debug\net6.0\ContactList.Shared.AssemblyInfoInputs.cache
+C:\Users\patry\source\repos\Contact-List\ContactList\ContactList\Shared\obj\Debug\net6.0\ContactList.Shared.AssemblyInfo.cs
+C:\Users\patry\source\repos\Contact-List\ContactList\ContactList\Shared\obj\Debug\net6.0\ContactList.Shared.csproj.CoreCompileInputs.cache
+C:\Users\patry\source\repos\Contact-List\ContactList\ContactList\Shared\obj\Debug\net6.0\ContactList.Shared.dll
+C:\Users\patry\source\repos\Contact-List\ContactList\ContactList\Shared\obj\Debug\net6.0\refint\ContactList.Shared.dll
+C:\Users\patry\source\repos\Contact-List\ContactList\ContactList\Shared\obj\Debug\net6.0\ContactList.Shared.pdb
+C:\Users\patry\source\repos\Contact-List\ContactList\ContactList\Shared\obj\Debug\net6.0\ref\ContactList.Shared.dll
