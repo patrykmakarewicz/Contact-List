@@ -22,23 +22,33 @@
         <label for="email">Email</label>
         <InputText id="firstname" @bind-Value="contact.Email" class="form-control"></InputText>
     </div>
+    <div>
+        <label for="category">Category</label>
+        <InputSelect @bind-Value="contact.CategoryId" class="form-select">
+            @foreach (var category in ContactService.Category)
+            {
+                <option value="@category.Id">@category.CategoryName</option>
+            }
+        </InputSelect>
+    </div>
     <button type="submit" class="btn btn-primary">Add Contact</button>
 </EditForm>
 
 @code {
-    [Parameter]
-    public int Id { get; set; }
 
     ContactList.Shared.Contact contact = new ContactList.Shared.Contact();
 
+    protected override async Task OnInitializedAsync()
+    {
+        await ContactService.GetCategories();
+        contact.Category = ContactService.Category[0];
+        contact.CategoryId = contact.Category.Id;
+    }
+
     async Task HandleSubmit()
     {
+        contact.Category = ContactService.Category.Find(o => o.Id == contact.CategoryId);
         await ContactService.AddContact(contact);
-        InvokeAsync(() =>
-                {
-
-                    StateHasChanged();
-                });
     }
 
 }

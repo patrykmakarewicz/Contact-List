@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,13 +18,13 @@ namespace ContactList.Shared
         public string Email { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
         public string PhoneNumber { get; set; } = string.Empty;
+        [ForeignKey("CategoryId")]
+        public Category? Category { get; set; }
         [Required]
-        public Category Category { get; set; }
+        public int CategoryId { get; set; }
+       
         public string CategoryDescription { get; set; } = string.Empty;
     }
 
-    public enum Category
-    {
-        Private, Business, Other
-    }
+ 
 }

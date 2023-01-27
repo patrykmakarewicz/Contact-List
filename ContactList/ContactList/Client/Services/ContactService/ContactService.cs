@@ -10,11 +10,14 @@ namespace ContactList.Client.Services.ContactService
             _http = http;
         }
         public List<Contact> Contacts { get; set; } = new List<Contact>();
+        public List<Category> Category { get; set; } = new List<Category>();
 
         public async Task AddContact(Contact contact)
         {
-            //var result =
-            await _http.PostAsJsonAsync("api/Contact", contact);
+            //var result = 
+                await _http.PostAsJsonAsync("api/Contact", contact);
+            //var response = await result.Content.ReadFromJsonAsync<List<Contact>>();
+            //Contacts = response;
         }
 
         public async Task<Contact> GetContact(int id)
@@ -46,6 +49,11 @@ namespace ContactList.Client.Services.ContactService
             //await SetContacts(result);
         }
 
-        
+        public async Task GetCategories()
+        {
+            var result = await _http.GetFromJsonAsync<List<Category>>("api/Contact/categories");
+            if (result != null)
+                Category = result;
+        }
     }
 }

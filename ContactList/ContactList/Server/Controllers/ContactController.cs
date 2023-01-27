@@ -18,6 +18,10 @@ namespace ContactList.Server.Controllers
         public async Task<IEnumerable<Contact>> GetContacts()
             => await _context.Contact.ToListAsync();
 
+        [HttpGet("categories")]
+        public async Task<IEnumerable<Category>> GetCategories()
+            => await _context.Category.ToListAsync();
+
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(Contact), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -32,6 +36,8 @@ namespace ContactList.Server.Controllers
         public async Task<IActionResult> AddContact(Contact contact)
         {
             await _context.Contact.AddAsync(contact);
+            //await _context.SaveChangesAsync();
+            _context.Entry(contact.Category).State = EntityState.Unchanged;
             await _context.SaveChangesAsync();
             return Ok();
         }
@@ -49,7 +55,9 @@ namespace ContactList.Server.Controllers
             dbContact.LastName = contact.LastName;
             dbContact.Email = contact.Email;
             dbContact.PhoneNumber = contact.PhoneNumber;
-
+            dbContact.CategoryId = contact.CategoryId;
+            dbContact.Category = contact.Category;
+            dbContact.CategoryDescription = contact.CategoryDescription;
 
             await _context.SaveChangesAsync();
             return NoContent();

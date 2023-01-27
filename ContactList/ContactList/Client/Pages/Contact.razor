@@ -21,6 +21,15 @@
         <label for="email">Email</label>
         <InputText id="firstname" @bind-Value="contact.Email" class="form-control"></InputText>
     </div>
+    <div>
+        <label for="category">Category</label>
+        <InputSelect @bind-Value="contact.CategoryId" class="form-select">
+            @foreach (var category in ContactService.Category)
+            {
+                <option value="@category.Id">@category.CategoryName</option>
+            }
+        </InputSelect>
+    </div>
     <button type="submit" class="btn btn-primary">Update Contact</button>
     <button type="button" class="btn btn-primary" @onclick="RemoveContact">Remove Contact</button>
 </EditForm>
@@ -35,10 +44,20 @@
     {
         //buttonText = "Update Contact";
         await ContactService.GetContacts();
+        await ContactService.GetCategories();
     }
     protected override async Task OnParametersSetAsync()
     {
         contact = await ContactService.GetContact(Id);
+        if (Id == null)
+        {
+            contact.Category = ContactService.Category[0];
+            contact.CategoryId = contact.Category.Id;
+        }
+        else
+        {
+            contact = await ContactService.GetContact((int)Id);
+        }
     }
 
     async Task HandleSubmit()
