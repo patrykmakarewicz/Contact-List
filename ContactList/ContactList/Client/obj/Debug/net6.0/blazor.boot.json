@@ -196,15 +196,15 @@
       "mscorlib.dll": "sha256-KqZqU1imWCwJ9UPDElyoolN8s7Yqhjk67wuOohFN5KA=",
       "netstandard.dll": "sha256-kBK\/QJy7\/skP97jqnvXnOFMrhWS8HZ1bsADFK\/gZkyM=",
       "System.Private.CoreLib.dll": "sha256-3webPuyNUXfAFKY5c1tC\/jBVrjZHelBwvXrr1E9VJuk=",
-      "ContactList.Shared.dll": "sha256-wkkXbTu2DBYLp6ws7OsJixqQtNwMBO0XetWgOTUF0ww=",
-      "ContactList.Client.dll": "sha256-nGNdIJECK+szjDLsnO1gXYN02TQA2GJ5GJ3rWhIJkE4="
+      "ContactList.Shared.dll": "sha256-CNKfNqcHrFFpyt99YTsLDVcXalRJ65L0\/4p5+o1xJ+Y=",
+      "ContactList.Client.dll": "sha256-qH2mOpyHlbWFHZPkMV+RIAVhDrghcUYNINSGW6\/qbcc="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "ContactList.Shared.pdb": "sha256-VOMyq3NOa4Lv1GBbo\/X0kEoQnzM15hcC6Kuh2wpK+9Q=",
-      "ContactList.Client.pdb": "sha256-kFlvQWGjPbjaUidRs1MASwptDvGnlRgtiiVRG9lkJQc="
+      "ContactList.Shared.pdb": "sha256-KAom0weCursSUEqZsjbv4vPaMGRZ1YZ\/weHS9zM2ONA=",
+      "ContactList.Client.pdb": "sha256-HVN9ptiKTMnqDPbOyzyH4MtFjHknx+q8Dg8sTq6AAnE="
     },
     "runtime": {
       "dotnet.6.0.13.1697ox35ph.js": "sha256-X\/515F1HEzgsDZdY8BJjt8YUwrWngHGZkMnpClhsrpY=",

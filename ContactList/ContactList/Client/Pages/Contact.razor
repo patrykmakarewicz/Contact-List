@@ -11,15 +11,15 @@
     </div>
     <div>
         <label for="lastname">Last Name</label>
-        <InputText id="firstname" @bind-Value="contact.LastName" class="form-control"></InputText>
+        <InputText id="lastname" @bind-Value="contact.LastName" class="form-control"></InputText>
     </div>
     <div>
         <label for="phonenumber">Phone Number</label>
-        <InputText id="firstname" @bind-Value="contact.PhoneNumber" class="form-control"></InputText>
+        <InputText id="phonenumber" @bind-Value="contact.PhoneNumber" class="form-control"></InputText>
     </div>
     <div>
         <label for="email">Email</label>
-        <InputText id="firstname" @bind-Value="contact.Email" class="form-control"></InputText>
+        <InputText id="email" @bind-Value="contact.Email" class="form-control"></InputText>
     </div>
     <div>
         <label for="category">Category</label>
@@ -29,6 +29,14 @@
                 <option value="@category.Id">@category.CategoryName</option>
             }
         </InputSelect>
+    </div>
+    <div>
+        <label for="categorydesc">Category Description</label>
+        <InputText id="categorydescription"
+                   disabled="@(contact.CategoryId != 3 ? true : false)"
+                   @bind-Value="contact.CategoryDescription"
+                   class="form-control">
+        </InputText>
     </div>
     <button type="submit" class="btn btn-primary">Update Contact</button>
     <button type="button" class="btn btn-primary" @onclick="RemoveContact">Remove Contact</button>
